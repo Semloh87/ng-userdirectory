@@ -1,0 +1,45 @@
+.users_filter {
+  margin: 2em auto;
+  width:90%;
+  max-width:600px;
+  ul {
+    display:flex;
+    margin:0;
+    padding:0;
+    list-style:none;
+    width:100%;
+    li {
+      width:25%;
+      &:first-child {
+        button {
+          border-radius: 10px 0 0 10px;
+        }
+      }
+      &:last-child {
+        button {
+          border-radius: 0 10px 10px 0;
+        }
+      }
+    }
+    button {
+      display:block;
+      width:100%;
+      box-shadow: none;
+      background-color:transparent;
+      padding:0.5em;
+      transition: background-color 0.3s ease;
+      &:hover {
+        background-color:rgba(#c9985f , 0.3);
+      }
+      &.current_filter {
+        background-color:#c9985f;
+      }
+    }
+  }
+}
+
+.user_list {
+  margin: 2em auto;
+  width:90%;
+  max-width:600px;
+}

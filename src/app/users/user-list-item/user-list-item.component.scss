@@ -1,0 +1,41 @@
+.user_list_item {
+  border: 1px solid #666878;
+  position: relative;
+  padding:15px;
+  h3 {
+    margin:0;
+  }
+  &--odd {
+    background-color:#aab7c9;
+  }
+  p:last-of-type {
+    margin-bottom:0;
+  }
+  &:hover {
+    .btn {
+      opacity:1;
+    }
+  }
+}
+
+:host {
+  &.first {
+    .user_list_item {
+      border-radius: 10px 10px 0 0;
+    }
+  }
+  &.last {
+    .user_list_item {
+      border-radius:0 0 10px 10px;
+    }
+  }
+}
+
+.btn {
+  position: absolute;
+  right:15px;
+  bottom:15px;
+  opacity:0;
+  transition: opacity 0.3 ease;
+  cursor: pointer;
+}

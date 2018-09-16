@@ -1,0 +1,5 @@
+<section [ngClass]="{ 'user_list_item' : user != null, 'user_list_item--odd': index % 2 != 0, 'user_list_item--even': index % 2 === 0}">
+  <h3>{{ user.name }}</h3>
+  <p>{{ user.job_title }}<br/><em>{{ user.role | capitalize }}</em></p>
+  <button class="btn btn--warn" (click)="onDeleteUser()">Delete</button>
+</section>

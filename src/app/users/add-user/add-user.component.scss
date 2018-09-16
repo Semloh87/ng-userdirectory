@@ -1,0 +1,22 @@
+.add_user {
+  margin: 2em auto;
+  width:90%;
+  max-width:600px;
+}
+.form_field {
+  border:1px solid #666878;
+  margin: 1em 0;
+  padding:20px 15px 15px;
+  position: relative;
+  > .field_label {
+    display:block;
+    position: absolute;
+    top:-0.5em;
+    background-color:white;
+    padding:0 5px;
+    font-weight:bold;
+  }
+  input + label {
+    margin: 0 10px 0 5px;
+  }
+}

@@ -1,0 +1,16 @@
+<section class="users_filter">
+  <ul>
+    <li *ngFor="let f of filter.filters">
+      <button (click)="filterUsers(f)" [ngClass]="{ 'current_filter' : f == filter.current}">
+        {{ f | capitalize }}
+      </button>
+    </li>
+  </ul>
+</section>
+<section class="user_list">
+  <app-user-list-item
+  *ngFor="let u of (users | filterUsers  : filter.current); let i = index; let first= first; let last = last"
+  [user]="u"
+  [index]="i"
+  [ngClass]="{ 'first' : first, 'last': last }"></app-user-list-item>
+</section>

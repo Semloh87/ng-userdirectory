@@ -1,0 +1,36 @@
+header {
+  padding:1em;
+  text-align: center;
+  font-style: italic;
+}
+
+nav {
+  width:90%;
+  max-width:600px;
+  margin:0 auto;
+  ul {
+    list-style:none;
+    margin:0;
+    padding:0;
+    display:flex;
+  }
+  li {
+    width:50%;
+    a {
+      display:block;
+      border: 1px solid grey;
+      padding:15px;
+      text-decoration: none;
+      transition: background-color 0.3s ease, color 0.3s ease, opacity 0.3s ease;
+      &.active {
+        background-color:#c9985f;
+        color:black;
+      }
+      &:hover {
+        background-color:#c9985f;
+        color:black;
+        opacity:0.5;
+      }
+    }
+  }
+}

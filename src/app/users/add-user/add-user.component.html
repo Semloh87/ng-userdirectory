@@ -1,0 +1,19 @@
+<section class="add_user">
+  <form [formGroup]="addUserForm" (ngSubmit)="onSubmit()">
+    <div class="form_field">
+      <label for="name" class="field_label">Name:</label>
+      <input type="text" formControlName="name">
+    </div>
+    <div class="form_field">
+      <label for="job_title" class="field_label">Job Tile:</label>
+      <input type="text" formControlName="job_title">
+    </div>
+    <div class="form_field">
+      <label class="field_label">Role</label>
+      <input type="radio" id="role:admin" name="role" formControlName="role" value="admin"> <label for="role:admin">Admin</label>
+      <input type="radio" id="role:member" name="role" formControlName="role" value="member"> <label for="role:member">Member</label>
+      <input type="radio" id="role:customer" name="role" formControlName="role" value="customer"> <label for="role:customer">Customer</label>
+    </div>
+    <button class="btn" type="submit">Add new user</button>
+  </form>
+</section>
