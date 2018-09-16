@@ -1,3 +1,5 @@
+<!--Buttons to filter the users, based on array of values in the filter.filters property.
+  Filter.current stores current filter and applies custom class -->
 <section class="users_filter">
   <ul>
     <li *ngFor="let f of filter.filters">
@@ -7,6 +9,10 @@
     </li>
   </ul>
 </section>
+<!-- User list section
+ngFor loop used to loop through users and filter results using a custom pipe 'filterUsers'
+ngFor also allows you to get access to certain properties, index is a property and reflects the current array item index, using let you can reasign to a variable and pass into component
+Other variables are: first, last, even, odd -->
 <section class="user_list">
   <app-user-list-item
   *ngFor="let u of (users | filterUsers  : filter.current); let i = index; let first= first; let last = last"
